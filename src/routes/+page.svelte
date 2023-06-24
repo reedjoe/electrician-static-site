@@ -1,5 +1,4 @@
 <script>
-	import Counter from '../components/Counter.svelte';
 	import welcome from '$lib/images/svelte-welcome.webp';
 	import welcome_fallback from '$lib/images/svelte-welcome.png';
 </script>
@@ -14,19 +13,19 @@
 	<h1>
 		<span class="welcome">
 			<picture>
-				<!-- <source srcset={welcome} type="image/webp" /> -->
+				<source srcset={welcome} type="image/webp" />
 				<img src={welcome_fallback} alt="Welcome" />
 			</picture>
 		</span>
 
-		to your new<br />SvelteKit app
+		to Jarvis Electrical Services
 	</h1>
 
-	<h2>
-		try editing <strong>I made an edit</strong>
-	</h2>
-
-	<Counter />
+	<p>Here is some text</p>
+	<p>Here is some more text</p>
+	<p>You get the idea, websites have text on them</p>
+	<p>Just padding out the page</p>
+	<p>Ignore what this actually says</p>
 </section>
 
 <style>

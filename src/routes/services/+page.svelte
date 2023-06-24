@@ -8,7 +8,6 @@
 </svelte:head>
 
 <section>
-
 	<h1>Services working</h1>
 </section>
 

@@ -5,9 +5,11 @@
 	let mobileNavElem: HTMLElement;
 
 	function toggleMobileNav() {
-		mobileNavElem.style.display = mobileNavElem.style.display === "none" || mobileNavElem.style.display === "" ?
-			"initial" :
-			"none";
+		mobileNavElem.style.display =
+			mobileNavElem.style.display === "none" ||
+			mobileNavElem.style.display === ""
+				? "initial"
+				: "none";
 	}
 </script>
 
@@ -83,17 +85,10 @@
 	</nav>
 
 	<div class="logo-wrapper">
-		<img
-			class="logo"
-			src={logo}
-			alt="Jarvis electrical services logo"
-		/>
+		<img class="logo" src={logo} alt="Jarvis electrical services logo" />
 	</div>
 
 	<nav class="desktop-nav">
-		<!-- <svg viewBox="0 0 2 3" aria-hidden="true">
-			<path d="M0,0 L1,2 C1.5,3 1.5,3 2,3 L2,0 Z" />
-		</svg> -->
 		<ul>
 			<li aria-current={$page.url.pathname === "/" ? "page" : undefined}>
 				<a href="/">Home</a>
@@ -113,15 +108,10 @@
 				<a href="/services">Services</a>
 			</li>
 		</ul>
-		<!-- <svg viewBox="0 0 2 3" aria-hidden="true">
-			<path d="M0,0 L0,3 C0.5,3 0.5,3 1,2 L2,0 Z" />
-		</svg> -->
 	</nav>
 
 	<div class="corner">
 		<address>
-			<!-- <a href="mailto:john@doe.com">haydon@gmail.com</a>
-			<div aria-hidden="true"> | </div> -->
 			<a href="tel:+1234567891">01603 777888</a>
 		</address>
 	</div>
@@ -139,17 +129,11 @@
 		z-index: 999;
 	}
 
-	/* .logo-wrapper {
-		display: none;
-	} */
-
 	.logo {
 		height: 48px;
 	}
 
 	.corner {
-		/* width: 3em; */
-		/* height: 3em; */
 		display: flex;
 		justify-content: center;
 		background-color: var(--color-theme-1);
@@ -163,8 +147,6 @@
 		gap: 5px;
 		align-items: center;
 		justify-content: center;
-		/* width: 100%;
-		height: 100%; */
 	}
 
 	.corner a {
@@ -193,18 +175,7 @@
 
 		display: none;
 		justify-content: center;
-		/* --background: rgba(255, 255, 255, 0.7); */
 	}
-
-	/* svg {
-		width: 2em;
-		height: 3em;
-		display: block;
-	}
-
-	path {
-		fill: var(--background);
-	} */
 
 	.desktop-nav ul {
 		position: relative;
@@ -215,8 +186,6 @@
 		justify-content: center;
 		align-items: center;
 		list-style: none;
-		/* background: var(--background);
-		background-size: contain; */
 	}
 
 	.desktop-nav li {
@@ -271,8 +240,6 @@
 		list-style: none;
 		padding-left: 0;
 		padding-top: 20px;
-		/* background: var(--background);
-		background-size: contain; */
 	}
 
 	.mobile-nav li[aria-current="page"] a {
@@ -280,10 +247,6 @@
 	}
 
 	@media screen and (min-width: 600px) {
-		/* .logo-wrapper {
-			display: initial;
-		} */
-
 		.mobile-nav-toggle {
 			display: none;
 		}

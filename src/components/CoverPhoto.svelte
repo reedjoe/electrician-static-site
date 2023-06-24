@@ -21,13 +21,11 @@
 		background-position: center center;
         background-color: rgba(49, 32, 15, 0.5);
         background-blend-mode: multiply;
-        /* position: relative; */
 	}
 
     .wrapper {
         position: absolute;
         top: 35%;
-        /* background-color: rgba(22, 22, 21, 0.873); */
         color: rgba(244, 244, 244, 0.876);
         max-width: 400px;
         display: flex;
