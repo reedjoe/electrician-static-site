@@ -21,6 +21,7 @@
 		background-position: center center;
         background-color: rgba(49, 32, 15, 0.5);
         background-blend-mode: multiply;
+        /* TODO fix for very large screens */
 	}
 
     .wrapper {

@@ -14,78 +14,58 @@
 </script>
 
 <header>
-	<div class="mobile-nav-toggle" on:click={toggleMobileNav}>
-		<svg
-			xmlns="http://www.w3.org/2000/svg"
-			width="48"
-			height="48"
-			viewBox="0 0 72 72"
-		>
-			<g id="line">
-				<line
-					x1="16"
-					x2="56"
-					y1="26"
-					y2="26"
-					fill="none"
-					stroke="#ffffff"
-					stroke-linecap="round"
-					stroke-linejoin="round"
-					stroke-miterlimit="10"
-					stroke-width="2"
-				/>
-				<line
-					x1="16"
-					x2="56"
-					y1="36"
-					y2="36"
-					fill="none"
-					stroke="#ffffff"
-					stroke-linecap="round"
-					stroke-linejoin="round"
-					stroke-miterlimit="10"
-					stroke-width="2"
-				/>
-				<line
-					x1="16"
-					x2="56"
-					y1="46"
-					y2="46"
-					fill="none"
-					stroke="#ffffff"
-					stroke-linecap="round"
-					stroke-linejoin="round"
-					stroke-miterlimit="10"
-					stroke-width="2"
-				/>
-			</g>
-		</svg>
-	</div>
-
-	<nav class="mobile-nav" bind:this={mobileNavElem}>
-		<ul>
-			<li aria-current={$page.url.pathname === "/" ? "page" : undefined}>
-				<a href="/">Home</a>
-			</li>
-			<li
-				aria-current={$page.url.pathname === "/about"
-					? "page"
-					: undefined}
+	<div class="left-corner">
+		<div class="mobile-nav-toggle" on:click={toggleMobileNav}>
+			<svg
+				xmlns="http://www.w3.org/2000/svg"
+				width="48"
+				height="48"
+				viewBox="0 0 72 72"
 			>
-				<a href="/about">About</a>
-			</li>
-			<li
-				aria-current={$page.url.pathname === "/services"
-					? "page"
-					: undefined}
-			>
-				<a href="/services">Services</a>
-			</li>
-		</ul>
-	</nav>
-
-	<div class="logo-wrapper">
-		<img class="logo" src={logo} alt="Jarvis electrical services logo" />
+				<g id="line">
+					<line
+						x1="16"
+						x2="56"
+						y1="26"
+						y2="26"
+						fill="none"
+						stroke="#ffffff"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						stroke-miterlimit="10"
+						stroke-width="2"
+					/>
+					<line
+						x1="16"
+						x2="56"
+						y1="36"
+						y2="36"
+						fill="none"
+						stroke="#ffffff"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						stroke-miterlimit="10"
+						stroke-width="2"
+					/>
+					<line
+						x1="16"
+						x2="56"
+						y1="46"
+						y2="46"
+						fill="none"
+						stroke="#ffffff"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						stroke-miterlimit="10"
+						stroke-width="2"
+					/>
+				</g>
+			</svg>
+		</div>
+	
+		<div class="logo-wrapper">
+			<img class="logo" src={logo} alt="Jarvis electrical services logo" />
+		</div>
 	</div>
 
 	<nav class="desktop-nav">
@@ -110,11 +90,33 @@
 		</ul>
 	</nav>
 
-	<div class="corner">
+	<div class="right-corner">
 		<address>
 			<a href="tel:+1234567891">01603 777888</a>
 		</address>
 	</div>
+
+	<nav class="mobile-nav" bind:this={mobileNavElem}>
+		<ul>
+			<li aria-current={$page.url.pathname === "/" ? "page" : undefined}>
+				<a href="/">Home</a>
+			</li>
+			<li
+				aria-current={$page.url.pathname === "/about"
+					? "page"
+					: undefined}
+			>
+				<a href="/about">About</a>
+			</li>
+			<li
+				aria-current={$page.url.pathname === "/services"
+					? "page"
+					: undefined}
+			>
+				<a href="/services">Services</a>
+			</li>
+		</ul>
+	</nav>
 </header>
 
 <style>
@@ -129,11 +131,15 @@
 		z-index: 999;
 	}
 
+	.left-corner {
+		display: flex;
+	}
+
 	.logo {
 		height: 48px;
 	}
 
-	.corner {
+	.right-corner {
 		display: flex;
 		justify-content: center;
 		background-color: var(--color-theme-1);
@@ -141,7 +147,7 @@
 		padding-left: 10px;
 	}
 
-	.corner address {
+	.right-corner address {
 		display: flex;
 		flex-direction: row;
 		gap: 5px;
@@ -149,7 +155,7 @@
 		justify-content: center;
 	}
 
-	.corner a {
+	.right-corner a {
 		display: flex;
 		align-items: center;
 		justify-content: center;
