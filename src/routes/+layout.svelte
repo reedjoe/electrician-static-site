@@ -10,7 +10,8 @@
 <div class="app">
 	<Nav />
 
-	{#if $page.url.pathname === '/'} //TODO this is crap don't do this
+	<!-- TODO this is crap don't do this -->
+	{#if $page.url.pathname === '/'}
 		<CoverPhoto />
 	{/if}
 
