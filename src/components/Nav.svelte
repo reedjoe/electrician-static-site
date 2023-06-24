@@ -1,8 +1,13 @@
 <script lang="ts">
+    import { beforeNavigate } from "$app/navigation";
 	import { page } from "$app/stores";
 	import logo from "$lib/images/jarvis_electrical_logo.jpg";
 
 	let mobileNavElem: HTMLElement;
+
+	beforeNavigate(()=>{
+		mobileNavElem.style.display = "none";
+	});
 
 	function toggleMobileNav() {
 		mobileNavElem.style.display =
