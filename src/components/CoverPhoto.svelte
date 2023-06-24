@@ -62,6 +62,18 @@
         box-shadow: 0 6px 6px rgba(0, 0, 0, 0.6);
     }
 
+    .contact-button:hover {
+        background-color:rgba(61, 61, 61, 0.274);
+        -webkit-transition: background-color 200ms linear;
+        -ms-transition: background-color 200ms linear;
+        transition: background-color 200ms linear;
+        
+        box-shadow: 0 8px 8px rgba(0, 0, 0, 0.6);
+        -webkit-transition: box-shadow 100ms ease-out;
+        -ms-transition: box-shadow 100ms ease-out;
+        transition: box-shadow 100ms ease-out;
+    }
+
     .down-arrow {
         bottom: 30px;
         position: absolute;

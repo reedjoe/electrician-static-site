@@ -4,11 +4,11 @@
 
 <svelte:head>
 	<title>Services</title>
-	<meta name="description" content="Svelte demo app" />
+	<meta name="description" content="Electrician services" />
 </svelte:head>
 
 <section>
-	<h1>Services working</h1>
+	<h1>Services page</h1>
 </section>
 
 <style>
