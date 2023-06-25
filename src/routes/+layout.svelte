@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import { page } from '$app/stores';
     import CoverPhoto from '../components/CoverPhoto.svelte';
     import Footer from '../components/Footer.svelte';

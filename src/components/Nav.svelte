@@ -2,12 +2,20 @@
     import { beforeNavigate } from "$app/navigation";
 	import { page } from "$app/stores";
 	import logo from "$lib/images/jarvis_electrical_logo.jpg";
+    import hamburger from "$lib/icons/hamburger.svg";
 
 	let mobileNavElem: HTMLElement;
 
 	beforeNavigate(()=>{
 		mobileNavElem.style.display = "none";
 	});
+
+	function handleMobileNavKeydown(event: KeyboardEvent) {
+		if (event.key === ' ' || event.key === 'Enter') {
+			event.preventDefault();
+			toggleMobileNav();
+		}
+	}
 
 	function toggleMobileNav() {
 		mobileNavElem.style.display =
@@ -20,52 +28,13 @@
 
 <header>
 	<div class="left-corner">
-		<div class="mobile-nav-toggle" on:click={toggleMobileNav}>
-			<svg
-				xmlns="http://www.w3.org/2000/svg"
-				width="48"
-				height="48"
-				viewBox="0 0 72 72"
-			>
-				<g id="line">
-					<line
-						x1="16"
-						x2="56"
-						y1="26"
-						y2="26"
-						fill="none"
-						stroke="#ffffff"
-						stroke-linecap="round"
-						stroke-linejoin="round"
-						stroke-miterlimit="10"
-						stroke-width="2"
-					/>
-					<line
-						x1="16"
-						x2="56"
-						y1="36"
-						y2="36"
-						fill="none"
-						stroke="#ffffff"
-						stroke-linecap="round"
-						stroke-linejoin="round"
-						stroke-miterlimit="10"
-						stroke-width="2"
-					/>
-					<line
-						x1="16"
-						x2="56"
-						y1="46"
-						y2="46"
-						fill="none"
-						stroke="#ffffff"
-						stroke-linecap="round"
-						stroke-linejoin="round"
-						stroke-miterlimit="10"
-						stroke-width="2"
-					/>
-				</g>
-			</svg>
+		<div
+			class="mobile-nav-toggle"
+			on:click={toggleMobileNav}
+			on:keydown={handleMobileNavKeydown}
+			role="button"
+			tabindex="0">
+			<img class="hamburger" src={hamburger} alt="Toggle navigation menu" />
 		</div>
 	
 		<div class="logo-wrapper">

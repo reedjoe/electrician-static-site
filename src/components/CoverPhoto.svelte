@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
     import down_arrow from "$lib/icons/down-arrow.svg";
 </script>
 

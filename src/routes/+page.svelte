@@ -1,11 +1,11 @@
-<script>
+<script lang="ts">
 	import welcome from '$lib/images/svelte-welcome.webp';
 	import welcome_fallback from '$lib/images/svelte-welcome.png';
 </script>
 
 <svelte:head>
 	<title>Jarvis Electrical Services</title>
-	<meta name="description" content="Svelte demo app" />
+	<meta name="description" content="Svelte demo app" /><!-- TODO -->
 </svelte:head>
 
 <section id="main-content">
