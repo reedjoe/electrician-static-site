@@ -53,7 +53,7 @@
     }
 
     .content_wrapper div {
-        max-width: 250px;
+        max-width: 280px;
     }
 
     .logo {
@@ -81,6 +81,7 @@
         display: inline-flex;
         gap: 10px;
         color: rgba(244, 244, 244, 0.876);
+        word-break: break-word;
     }
 
     .copyright {
@@ -97,6 +98,10 @@
         .content_wrapper {
             padding: 40px;
             flex-direction: row;
+        }
+
+        .contact a {
+            word-break: normal;
         }
     }
 </style>

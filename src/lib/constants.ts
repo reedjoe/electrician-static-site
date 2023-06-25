@@ -1,6 +1,6 @@
-export const phoneNumber = '01603 777888';
+export const phoneNumber = '07841 977842';
 
-export const emailAddress = 'haydon@gmail.com';
+export const emailAddress = 'haydon@jarviselectricalservices.com';
 
 export const facebookUrl = 'https://www.facebook.com/jarviselectricalservices';
 export const facebookProfileName = 'jarviselectricalservices';

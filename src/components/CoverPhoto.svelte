@@ -1,5 +1,6 @@
 <script lang="ts">
     import down_arrow from "$lib/icons/down-arrow.svg";
+	import { emailAddress } from "$lib/constants";
 </script>
 
 <div class="cover-photo">
@@ -9,6 +10,11 @@
         <a href="/services" class="contact-button">View Services</a>
     </div>
     <a href="#main-content"><img class="down-arrow" src={down_arrow} alt="Down" /></a>
+    <div class="email">
+        <a href="mailto:{emailAddress}">
+            {emailAddress}
+        </a>
+    </div>
 </div>
 
 <style>
@@ -24,7 +30,7 @@
 
     .wrapper {
         position: absolute;
-        top: 35%;
+        top: 30%;
         color: rgba(244, 244, 244, 0.876);
         max-width: 400px;
         display: flex;
@@ -75,7 +81,7 @@
     }
 
     .down-arrow {
-        bottom: 30px;
+        bottom: 90px;
         position: absolute;
         margin-left: auto;
         margin-right: auto;
@@ -84,9 +90,30 @@
         text-align: center;
     }
 
+    .email {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 300px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(72, 72, 72, 0.361);
+        border-radius: 15px 0 0 0;
+    }
+
+    .email a {
+        display: inline-flex;
+        gap: 10px;
+        color: var(--color-theme-1);
+        font-size: 16px;;
+    }
+
     @media screen and (min-width: 600px) {
         .wrapper {
             left: 10%;
+            top: 35%;
         }
 
         h1 {
@@ -101,6 +128,21 @@
 
         .contact-button {
             font-size: 22px;
+        }
+    }
+
+    @media screen and (min-width: 800px) {
+        .down-arrow {
+            bottom: 30px;
+        }
+
+        .email {
+            width: 350px;
+            border-radius: 15px 0 0 0;
+        }
+
+        .email a {
+            font-size: 18px;;
         }
     }
 </style>
