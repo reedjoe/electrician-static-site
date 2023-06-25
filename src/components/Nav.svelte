@@ -3,6 +3,7 @@
 	import { page } from "$app/stores";
 	import logo from "$lib/images/jarvis_electrical_logo.jpg";
     import hamburger from "$lib/icons/hamburger.svg";
+	import { phoneNumber } from "$lib/constants";
 
 	let mobileNavElem: HTMLElement;
 
@@ -66,7 +67,7 @@
 
 	<div class="right-corner">
 		<address>
-			<a href="tel:+1234567891">01603 777888</a>
+			<a href="tel:+{phoneNumber}">{phoneNumber}</a>
 		</address>
 	</div>
 

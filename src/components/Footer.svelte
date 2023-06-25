@@ -3,6 +3,7 @@
     import telephone from "$lib/icons/telephone.svg";
     import email from "$lib/icons/email.svg";
     import facebook from "$lib/icons/facebook.svg";
+	import { phoneNumber, emailAddress, facebookUrl, facebookProfileName } from "$lib/constants";
 
     let currentYear = new Date().getFullYear().toString();
 </script>
@@ -18,17 +19,17 @@
             </p>
         </div>
         <div class="contact">
-            <a href="tel:+1234567891">
+            <a href="tel:+{phoneNumber}">
                 <img class="telephone" src={telephone} alt="Telephone number" />
-                01603 777888
+                {phoneNumber}
             </a>
-            <a href="mailto:john@doe.com">
+            <a href="mailto:{emailAddress}">
                 <img class="email" src={email} alt="Email address" />
-                haydon@gmail.com
+                {emailAddress}
             </a>
-            <a href="https://www.facebook.com/jarviselectricalservices">
+            <a href="{facebookUrl}">
                 <img class="facebook" src={facebook} alt="Facebook account" />
-                jarviselectricalservices
+                {facebookProfileName}
             </a>
         </div>
     </div>
