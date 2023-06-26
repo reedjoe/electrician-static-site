@@ -20,6 +20,8 @@
 <style>
 	.cover-photo {
 		min-height: 100vh;
+		min-height: 100svh;
+
 		background-image: url($lib/images/patrick-tomasso-1NTFSnV-KLs-unsplash.jpg);
 		background-size: cover;  
 		background-repeat: no-repeat;
@@ -81,7 +83,7 @@
     }
 
     .down-arrow {
-        bottom: 90px;
+        bottom: 80px;
         position: absolute;
         margin-left: auto;
         margin-right: auto;
