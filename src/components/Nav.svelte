@@ -6,9 +6,11 @@
 	import { phoneNumber } from "$lib/constants";
 
 	let mobileNavElem: HTMLElement;
+	let isMobileNavExpanded = false;
 
-	beforeNavigate(()=>{
-		mobileNavElem.style.display = "none";
+	beforeNavigate(() => {
+		isMobileNavExpanded = false;
+		document.body.style.overflow = 'initial';
 	});
 
 	function handleMobileNavKeydown(event: KeyboardEvent) {
@@ -19,11 +21,8 @@
 	}
 
 	function toggleMobileNav() {
-		mobileNavElem.style.display =
-			mobileNavElem.style.display === "none" ||
-			mobileNavElem.style.display === ""
-				? "initial"
-				: "none";
+		isMobileNavExpanded = !isMobileNavExpanded;
+		document.body.style.overflow = isMobileNavExpanded ? 'hidden' : 'initial';
 	}
 </script>
 
@@ -71,7 +70,7 @@
 		</address>
 	</div>
 
-	<nav class="mobile-nav" bind:this={mobileNavElem}>
+	<nav class="mobile-nav {isMobileNavExpanded ? 'visible' : 'hidden'}" bind:this={mobileNavElem}>
 		<ul>
 			<li aria-current={$page.url.pathname === "/" ? "page" : undefined}>
 				<a href="/">Home</a>
@@ -137,10 +136,6 @@
 		width: 100%;
 		height: 100%;
 		color: var(--color-text);
-	}
-
-	.mobile-nav {
-		display: none;
 	}
 
 	.mobile-nav-toggle:hover {
@@ -210,6 +205,36 @@
 		width: 250px;
 		height: 100vh;
 		background-color: #353839f6;
+		transform: translateX(-100%);
+    	-webkit-transform: translateX(-100%);
+	}
+
+	.hidden {
+		animation: slide-out 0.35s forwards;
+		-webkit-animation: slide-out 0.35s forwards;
+	}
+
+	.visible {
+		animation: slide-in 0.4s forwards;
+    	-webkit-animation: slide-in 0.4s forwards;
+	}
+
+	@keyframes slide-in {
+		100% { transform: translateX(0%); }
+	}
+
+	@-webkit-keyframes slide-in {
+		100% { -webkit-transform: translateX(0%); }
+	}
+		
+	@keyframes slide-out {
+		0% { transform: translateX(0%); }
+		100% { transform: translateX(-100%); }
+	}
+
+	@-webkit-keyframes slide-out {
+		0% { -webkit-transform: translateX(0%); }
+		100% { -webkit-transform: translateX(-100%); }
 	}
 
 	.mobile-nav ul {
